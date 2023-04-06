@@ -17,26 +17,9 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
-        <x-banner />
-
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <body class="bg-gray-100 dark:bg-gray-900 font-sans antialiased">
+        <div>
             @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="flex justify-between max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        @if (isset($header))
-                            <div>{{ $header }}</div>
-                        @endif
-
-                        @if (isset($button))
-                            <a href="{{ $link }}">{{ $button }}</div>
-                        @endif
-
-                    </div>
-                </header>
 
             <!-- Page Content -->
             <main>

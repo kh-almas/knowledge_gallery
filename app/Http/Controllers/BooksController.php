@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class BooksController extends Controller
 {
@@ -11,8 +12,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        $link = "create";
-        return view('layouts.admin.books.index',compact('link'));
+        return view('layouts.admin.books.index');
     }
 
     /**
@@ -20,7 +20,10 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        if(!Gate::allows('isAdmin')){
+            abort(403);
+        }
+        return view('layouts.admin.books.create');
     }
 
     /**

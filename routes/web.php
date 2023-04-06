@@ -24,5 +24,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 //         return view('dashboard');
 //     })->name('dashboard');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/books', [BooksController::class, 'index'])->name('dashboard');
+    Route::get('/books', [BooksController::class, 'index'])->name('books');
+    Route::get('/create-books', [BooksController::class, 'create'])->name('books.create');
 });

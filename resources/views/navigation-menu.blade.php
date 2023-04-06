@@ -96,8 +96,8 @@
                                 {{ __('Actions') }}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Add Books') }}
+                            <x-dropdown-link href="{{ route('books') }}">
+                                {{ __('Books') }}
                             </x-dropdown-link>
 
                             <x-dropdown-link href="{{ route('profile.show') }}">
