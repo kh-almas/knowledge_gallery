@@ -104,11 +104,11 @@
                                 {{ __('Books search') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link href="{{ route('books_update') }}">
                                 {{ __('Book Update') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link href="{{ route('books_order') }}">
                                 {{ __('View Order') }}
                             </x-dropdown-link>
 
