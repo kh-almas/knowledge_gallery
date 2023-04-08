@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookSearchController;
 use App\Http\Controllers\BookUpdateController;
+use App\Http\Controllers\DemoDataController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -34,4 +35,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/book-search', [BookSearchController::class, 'index'])->name('books_search');
     Route::get('/book-update', [BookUpdateController::class, 'index'])->name('books_update');
     Route::get('/books/order', [OrderController::class, 'index'])->name('books_order');
+
+    Route::get('/demo-data', [DemoDataController::class, 'index'])->name('demo_data');
 });

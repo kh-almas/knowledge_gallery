@@ -142,6 +142,12 @@
 
                             <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
+                            <x-dropdown-link href="{{ route('demo_data') }}">
+                                {{ __('Add Demo Data') }}
+                            </x-dropdown-link>
+
+                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
+
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf

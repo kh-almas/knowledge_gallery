@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-header title="{{ __('Update books') }}"></x-header>
     <x-card>
         <form action="" method="post">
             <div>
