@@ -4,6 +4,9 @@ use App\Http\Controllers\BookSearchController;
 use App\Http\Controllers\BookUpdateController;
 use App\Http\Controllers\DemoDataController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\RequestForBooksController;
+use App\Http\Controllers\RequestFromLibraryController;
+use App\Http\Controllers\RequestFromPersonController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BooksController;
@@ -24,9 +27,6 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/books', [BooksController::class, 'index'])->name('books');
     Route::get('/create-books', [BooksController::class, 'create'])->name('books.create');
@@ -37,4 +37,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/books/order', [OrderController::class, 'index'])->name('books_order');
 
     Route::get('/demo-data', [DemoDataController::class, 'index'])->name('demo_data');
+
+    Route::get('/request/books/library', [RequestFromLibraryController::class, 'index'])->name('request_from_library');
+    Route::get('/request/books/person', [RequestFromPersonController::class, 'index'])->name('request_from_person');
+
+    Route::get('/request/books', [RequestForBooksController::class, 'index'])->name('book_request');
 });

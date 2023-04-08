@@ -108,22 +108,33 @@
                                 {{ __('Book Update') }}
                             </x-dropdown-link>
 
+                            <x-dropdown-link href="{{ route('profile.show') }}">
+                                {{ __('Outdoor books') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="{{ route('profile.show') }}">
+                                {{ __('Indoor books') }}
+                            </x-dropdown-link>
+
                             <x-dropdown-link href="{{ route('books_order') }}">
                                 {{ __('View Order') }}
                             </x-dropdown-link>
+
+                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
                             <div class="block px-4 py-2 text-xs text-gray-400">
                                 {{ __('Request for Book')}}
                             </div>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link href="{{ route('request_from_library') }}">
                                 {{ __('From Library') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link href="{{ route('request_from_person') }}">
                                 {{ __('From Person') }}
                             </x-dropdown-link>
 
+                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
@@ -145,8 +156,6 @@
                             <x-dropdown-link href="{{ route('demo_data') }}">
                                 {{ __('Add Demo Data') }}
                             </x-dropdown-link>
-
-                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
 
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>
