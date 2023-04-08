@@ -100,7 +100,7 @@
                                 {{ __('Books') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
+                            <x-dropdown-link href="{{ route('books_search') }}">
                                 {{ __('Books search') }}
                             </x-dropdown-link>
 

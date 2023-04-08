@@ -3,16 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
 
-class BooksController extends Controller
+class BookSearchController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('layouts.admin.books.index');
+        return view('layouts.admin.books.search');
     }
 
     /**
@@ -20,8 +19,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        Gate::authorize('isAdmin');
-        return view('layouts.admin.books.create');
+        //
     }
 
     /**

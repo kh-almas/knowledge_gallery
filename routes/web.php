@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookSearchController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BooksController;
@@ -26,4 +27,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/books', [BooksController::class, 'index'])->name('books');
     Route::get('/create-books', [BooksController::class, 'create'])->name('books.create');
+
+
+    Route::get('/book-search', [BookSearchController::class, 'index'])->name('books_search');
 });
