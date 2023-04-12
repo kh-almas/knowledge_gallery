@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookSearchController;
 use App\Http\Controllers\BookUpdateController;
 use App\Http\Controllers\DemoDataController;
+use App\Http\Controllers\IndoorOutdoorBooController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RequestForBooksController;
 use App\Http\Controllers\RequestFromLibraryController;
@@ -42,4 +43,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/request/books/person', [RequestFromPersonController::class, 'index'])->name('request_from_person');
 
     Route::get('/request/books', [RequestForBooksController::class, 'index'])->name('book_request');
+
+    Route::get('/indoor/books', [IndoorOutdoorBooController::class, 'indoor'])->name('book_indoor');
+    Route::get('/outdoor/books', [IndoorOutdoorBooController::class, 'outdoor'])->name('book_outdoor');
 });

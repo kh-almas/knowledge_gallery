@@ -108,12 +108,12 @@
                                 {{ __('Book Update') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Outdoor books') }}
+                            <x-dropdown-link href="{{ route('book_indoor') }}">
+                                {{ __('Indoor books') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Indoor books') }}
+                            <x-dropdown-link href="{{ route('book_outdoor') }}">
+                                {{ __('Outdoor books') }}
                             </x-dropdown-link>
 
                             <x-dropdown-link href="{{ route('books_order') }}">
